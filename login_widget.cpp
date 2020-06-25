@@ -10,7 +10,8 @@ Login_Widget::Login_Widget(QWidget *parent)
     ui->setupUi(this);
     ui->pswd_lineEdit_2->setEchoMode(QLineEdit::Password);
     homewindow=new HomeWindow(&dbhelper);
-    Sleep(2000);
+   // Sleep(2000);
+    connect(homewindow,SIGNAL(back_from_home()),this,SLOT(deal_from_home()));
 }
 
 Login_Widget::~Login_Widget()
@@ -52,8 +53,19 @@ void Login_Widget::on_login_pushButton_clicked()
       }
 
 
+    int initialpos= query.at();
 
-      int size=query.size();
+      int size;
+      if(query.last())
+      {
+          size=query.at()+1;
+      }
+      else
+      {
+          size=0;
+      }
+      query.seek(initialpos);
+      qDebug()<<"大小"<<size;
       if(size==0)
       {
           QMessageBox::warning(this,"Warning","不存在的收银员编号!");
@@ -82,4 +94,10 @@ void Login_Widget::on_login_pushButton_clicked()
       this->hide();
       homewindow->show();
 
+}
+
+void Login_Widget::deal_from_home()
+{
+     homewindow->hide();
+     this->show();
 }

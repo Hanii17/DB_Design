@@ -4,6 +4,7 @@
 #include<QDebug>
 #include<QSqlQuery>
 #include<QString>
+#include<QDebug>
 insert_Dialog::insert_Dialog(DBDAL *dbh,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::insert_Dialog)
@@ -38,12 +39,15 @@ void insert_Dialog::on_insert_pushButton_clicked()
           return;}
       QSqlQuery query;
       query.prepare("insert into Commodity\
-                    values(?,?,?,?,?");
+                    values(?,?,?,?,?)");
      query.bindValue(0,this->ui->ATno_lineEdit_5->text());
      query.bindValue(1,this->ui->no_lineEdit->text());
      query.bindValue(2,this->ui->name_lineEdit_2->text());
       query.bindValue(3,ui->amount_lineEdit_3->text().toInt());
-      query.bindValue(4,ui->price_lineEdit_4->text().toFloat());
+     // query.bindValue(4,ui->price_lineEdit_4->text().toFloat());
+       query.bindValue(4,ui->price_lineEdit_4->text().toInt());
+       qDebug()<<ui->price_lineEdit_4->text().toInt();
+
       if(!query.exec())//插入失败
       {
           QMessageBox::critical(this,"Error","商品表信息插入失败");

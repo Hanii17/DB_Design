@@ -21,7 +21,7 @@ public:
 
 private slots:
     void on_login_pushButton_clicked();
-
+    void deal_from_home();
 private:
     Ui::Login_Widget *ui;
  DBDAL dbhelper;

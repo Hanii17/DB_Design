@@ -9,7 +9,7 @@ public:
     bool connectDatabase();//打开数据库
     void disconnectDatabase();//关闭数据库
 
-private:
+    public:
     QSqlDatabase db;
 };
 
