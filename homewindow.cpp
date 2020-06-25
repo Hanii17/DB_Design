@@ -300,7 +300,7 @@ void HomeWindow::on_pushButton_4_clicked()
         {qDebug()<<"数据库连接失败";
             return;}
         QSqlQuery query;//准备查询顾客表
-        query.prepare("select VipMem.Vname,VipMem.Vphno\
+        query.prepare("select VipMem.Vname,VipMem.Vphno,VipMem.Deadline\
                       from VipMem\
                       where VipMem.Cardno=:cardID");
 
@@ -321,6 +321,7 @@ void HomeWindow::on_pushButton_4_clicked()
                   size=0;
               }
               query.seek(initialpos);
+
             if(size==0)
             {
                 QMessageBox::critical(this,"Error","会员卡匹配失败!");
@@ -329,12 +330,17 @@ void HomeWindow::on_pushButton_4_clicked()
             }
             QString name;
             QString phno;//查询人名是否和会员卡号匹配
+            QString deadline;
             while (query.next()) {
                   name=query.value(0).toString();
                   phno=query.value(1).toString();
+                  deadline=query.value(2).toString();
             }
+            QDateTime now=QDateTime::currentDateTime();
+            QDateTime dead=QDateTime::fromString(deadline,"yyyy-MM-dd hh:mm:ss");
+
             //匹配成功
-            if(name.compare(guest.name)==0&&phno.compare(guest.phnumber))
+            if(name.compare(guest.name)==0&&phno.compare(guest.phnumber)==0&&dead>now)
             {
                    guest.cardID=this->ui->vip_lineEdit_2->text();
                    QMessageBox::information(this,"Success","会员卡匹配成功!");
@@ -1075,6 +1081,7 @@ void HomeWindow::on_serch_vip_pushButton_6_clicked()
                }
                else
                {
+
                    qDebug()<<"窗口显示";
                    //将会员信息显示在界面上
                     qDebug()<<"countvip"<<count_forVIP;
@@ -1097,8 +1104,6 @@ void HomeWindow::on_serch_vip_pushButton_6_clicked()
 
                    }
 
-
-                   QMessageBox::information(this,"Success","查询成功");
                    dbhelper->disconnectDatabase();
                    return;
                }

@@ -6,7 +6,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QPixmap pixmap("start.png");   //程序等待时间
+    QPixmap pixmap(":/new/prefix1/a.jpg");   //程序等待时间
+
     QSplashScreen splash(pixmap);
     splash.show();
     a.processEvents();

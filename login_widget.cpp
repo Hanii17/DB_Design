@@ -10,7 +10,7 @@ Login_Widget::Login_Widget(QWidget *parent)
     ui->setupUi(this);
     ui->pswd_lineEdit_2->setEchoMode(QLineEdit::Password);
     homewindow=new HomeWindow(&dbhelper);
-   // Sleep(2000);
+    Sleep(2000);
     connect(homewindow,SIGNAL(back_from_home()),this,SLOT(deal_from_home()));
 }
 

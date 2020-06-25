@@ -25,19 +25,38 @@
   <property name="windowTitle">
    <string>收银系统V1.0</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/new/prefix1/image/cash_icon.png</normaloff>:/new/prefix1/image/cash_icon.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_9">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,1,3,0,3,3,3">
       <item>
        <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>当前收银员编号：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLabel" name="staff_label">
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -58,8 +77,17 @@
       </item>
       <item>
        <widget class="QLabel" name="time_label">
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
        </widget>
       </item>
@@ -78,8 +106,17 @@
       </item>
       <item>
        <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>收银台号：1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -137,7 +174,7 @@
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="currentIndex">
-         <number>3</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0">
@@ -189,8 +226,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>顾客姓名：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -212,8 +258,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_4">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>顾客电话：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -272,8 +327,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_8">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>会员卡号:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -345,8 +409,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_5">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>商品货号：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -368,8 +441,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_6">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>商品编号：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -391,8 +473,17 @@
                </item>
                <item>
                 <widget class="QLabel" name="label_7">
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>数量：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -601,8 +692,17 @@
                  <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="5,5,2,5,5,2,5,4,2">
                   <item>
                    <widget class="QLabel" name="label_9">
+                    <property name="font">
+                     <font>
+                      <family>黑体</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>商品货号:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -628,8 +728,17 @@
                   </item>
                   <item>
                    <widget class="QLabel" name="label_10">
+                    <property name="font">
+                     <font>
+                      <family>黑体</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>商品编号：</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -651,8 +760,17 @@
                   </item>
                   <item>
                    <widget class="QLabel" name="label_11">
+                    <property name="font">
+                     <font>
+                      <family>黑体</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>商品名：</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -781,6 +899,12 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,1,1,1">
                     <item>
                      <widget class="QLabel" name="label_12">
+                      <property name="font">
+                       <font>
+                        <family>黑体</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>商品货号：</string>
                       </property>
@@ -793,6 +917,9 @@
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -822,6 +949,12 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,1,1,1">
                     <item>
                      <widget class="QLabel" name="label_16">
+                      <property name="font">
+                       <font>
+                        <family>黑体</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>商品编号：</string>
                       </property>
@@ -834,6 +967,9 @@
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -863,6 +999,12 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1,1,1">
                     <item>
                      <widget class="QLabel" name="label_17">
+                      <property name="font">
+                       <font>
+                        <family>黑体</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>商品名称：</string>
                       </property>
@@ -875,6 +1017,9 @@
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -904,6 +1049,12 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,1,1,1">
                     <item>
                      <widget class="QLabel" name="label_14">
+                      <property name="font">
+                       <font>
+                        <family>黑体</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>商品数量：</string>
                       </property>
@@ -916,6 +1067,9 @@
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -945,6 +1099,12 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,1,1,1">
                     <item>
                      <widget class="QLabel" name="label_15">
+                      <property name="font">
+                       <font>
+                        <family>黑体</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>商品价格：</string>
                       </property>
@@ -957,6 +1117,9 @@
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -1129,6 +1292,12 @@
              </item>
              <item>
               <widget class="QLabel" name="label_20">
+               <property name="font">
+                <font>
+                 <family>黑体</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>  卡号：</string>
                </property>
@@ -1182,6 +1351,12 @@
              </item>
              <item>
               <widget class="QLabel" name="label_21">
+               <property name="font">
+                <font>
+                 <family>黑体</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string> 姓名：</string>
                </property>
@@ -1205,6 +1380,12 @@
              </item>
              <item>
               <widget class="QLabel" name="label_22">
+               <property name="font">
+                <font>
+                 <family>黑体</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>电话：</string>
                </property>
@@ -1311,7 +1492,7 @@
             </widget>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="6,3,2,3">
+            <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="20,3,2,3">
              <item>
               <widget class="QTableWidget" name="vip_info_tableWidget"/>
              </item>
@@ -1432,6 +1613,12 @@
             <width>1066</width>
             <height>745</height>
            </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="currentIndex">
            <number>1</number>
@@ -1566,6 +1753,9 @@
                  <property name="text">
                   <string/>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -1596,6 +1786,9 @@
                  <property name="text">
                   <string/>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -1625,6 +1818,9 @@
                  </property>
                  <property name="text">
                   <string/>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -2525,6 +2721,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
